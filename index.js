@@ -1,16 +1,16 @@
 /**
  * Don't change these constants!
  */
-const DODGER = document.getElementById('dodger')
-const GAME = document.getElementById('game')
-const GAME_HEIGHT = 400
-const GAME_WIDTH = 400
-const LEFT_ARROW = 37 // use e.which!
-const RIGHT_ARROW = 39 // use e.which!
-const ROCKS = []
-const START = document.getElementById('start')
+const DODGER = document.getElementById('dodger');
+const GAME = document.getElementById('game');
+const GAME_HEIGHT = 400;
+const GAME_WIDTH = 400;
+const LEFT_ARROW = 37; // use e.which!
+const RIGHT_ARROW = 39; // use e.which!
+const ROCKS = [];
+const START = document.getElementById('start');
 
-var gameInterval = null
+var gameInterval = null;
 
 /**
  * Be aware of what's above this line,
@@ -47,8 +47,10 @@ function checkCollision(rock) {
                * 3. The rock's left edge is < the DODGER's right edge,
                *    and the rock's right edge is > the DODGER's right edge
                */) {
-      if((rockLeftEdge <= dodgerLeftEdge) && (rockRightEdge <= dodgerLeftEdge))           
-      return true;
+      if(((rockLeftEdge <= dodgerLeftEdge) && (rockRightEdge <= dodgerLeftEdge)) ||
+      ((rockLeftEdge >= dodgerLeftEdge) && (rockRightEdge <= dodgerRightEdge)) ||
+      ((rockLeftEdge <= dodgerRightEdge) &&(rockRightEdge >= dodgerRightEdge)))    {    
+      return true;}
     }
   }
 }

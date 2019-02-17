@@ -67,9 +67,7 @@ function createRock(x) {
    * seems like a good pace.)
    */
   function moveRock() {
-    // implement me!
-    // (use the comments below to guide you!)
-    /**
+     /**
      * If a rock collides with the DODGER,
      * we should call endGame()
      */
@@ -83,7 +81,7 @@ function createRock(x) {
      * But if the rock *has* reached the bottom of the GAME,
      * we should remove the rock from the DOM
      */
-     
+    if () 
   }
 
   // We should kick of the animation of the rock around here

@@ -81,7 +81,16 @@ function createRock(x) {
      * But if the rock *has* reached the bottom of the GAME,
      * we should remove the rock from the DOM
      */
-    
+    rock.style.top= `${top +=2}px`;
+    if (checkCollision(rock) === true){
+      return endGame();
+    }
+    else if (top < GAME_HEIGHT){
+      window.requestAnimationFrame(moveRock);
+    }
+    else{
+      rock.remove();
+    }
   }
 
   // We should kick of the animation of the rock around here

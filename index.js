@@ -172,7 +172,7 @@ function moveDodgerRight() {
  * @returns {number} The position as an integer (without 'px')
  */
 function positionToInteger(p) {
-  return parseInt(p.split('px')[0]) || 0
+  return parseInt(p.split('px')[0]) || 0;
 }
 
 function start() {
